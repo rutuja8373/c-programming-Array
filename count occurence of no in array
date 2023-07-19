@@ -1,0 +1,22 @@
+//accept a no and count no of time occourence in array
+#include<stdio.h>
+int main()
+{
+	int a[100],i,n,num,count=0;
+	printf("enter limit:");
+	scanf("%d",&n);
+	printf("\n enter n no:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+
+	printf("\n enter no to search");
+	scanf("%d",&num);
+     for(i=0;i<n;i++)
+     {
+     	if(a[i]==num)
+     	count++;
+	 }
+	 printf("\n occurence count=%d",count);
+}
