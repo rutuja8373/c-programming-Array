@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int rev=0,a=0,n=0;
+	printf("enter no:");
+	scanf("%d",&n);
+	while(n>0)
+	{
+	a=n%10;
+	rev=rev*10+a;
+	n=n/10;
+	}
+	printf("\nreverse no=%d",rev);
+}
