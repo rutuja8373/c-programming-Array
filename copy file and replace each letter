@@ -1,0 +1,27 @@
+//copy one file to another file copy uppercase to lowercase, lowercase to upper,each digit is replace by*
+#include<ctype.h>
+int main()
+{
+	FILE *fp1,*fp2;
+	char ch;
+	fp1=fopen("rbnb.txt","r");
+	fp2=fopen("college.txt","w");
+	if(fp1==NULL)
+	{
+		printf("not found");
+		exit(0);
+	}
+	while(!feof(fp1))
+	{
+		ch=fgetc(fp1);
+	     if(isupper(ch))
+		fputc(tolower(ch),fp2);
+		else if(islower(ch))
+		fputc(toupper(ch),fp2);
+		else if(isdigit(ch))
+		fputc('*',fp2);
+	}
+	fclose(fp1);
+	fclose(fp2);
+	printf("copy successfuly");
+}
