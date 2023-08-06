@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int i,n,a[100],num,x;
+	printf("Enter limit:");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		a[i]=rand()%100;
+	}
+	printf("\nRandom nos=");
+	for(i=1;i<=n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+	printf("\nEnter no to search:");
+	scanf("%d",&x);
+	for(i=1;i<=n;i++)
+	{
+		if(a[i]==x)
+		{
+			printf("\nFound position=%d",i);
+		}
+	}
+	if(i==n)
+		printf("\nNot found..");
+}
